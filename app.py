@@ -6,10 +6,10 @@ import pymongo
 app = Flask(__name__)
 
 # setting up PyMongo, db is database used
-client = pymongo.MongoClient("mongodb+srv://hamza:123@cluster0.oyduo.mongodb.net/user_management?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://<username>:<password>@cluster0.oyduo.mongodb.net/user_management?retryWrites=true&w=majority")
 db = client.user_database
 
-app.config["SECRET_KEY"] = "guessable key"
+app.config["SECRET_KEY"] = "<secret key>"
 
 # login manager for managing login sessions 
 login_manager = LoginManager()
